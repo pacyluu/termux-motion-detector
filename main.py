@@ -9,7 +9,7 @@ prev_path = "prev.jpg"
 curr_path = "curr.jpg"
 
 def send_discord_message():
-    webhook = DiscordWebhook(url=WEBHOOK, content = "Cat Detected")
+    webhook = DiscordWebhook(url=WEBHOOK, content = "Motion Detected")
     with open(curr_path, 'rb') as f:
         webhook.add_file(file=f.read(), filename='example.jpg')
     response = webhook.execute()
